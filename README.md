@@ -20,7 +20,7 @@ Anything else that you want to add for users? You can write it here in markdown 
 - Step 2: download all the dep.. 
 - Step 3: Run is using NPM run dev 
 - Step 4: Read all the models 
-- Step 3: Read all the models 
+- Step 5: Read all the models 
 
  
 ![](https://img.shields.io/badge/IMAGES-4298B8.svg?style=for-the-badge&logoColor=white)
