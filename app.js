@@ -15,7 +15,7 @@ dotenv.config({
 });
 
 //Using MIddleware
-
+console.log("working fine");
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
