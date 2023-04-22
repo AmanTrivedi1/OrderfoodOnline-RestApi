@@ -1,9 +1,7 @@
 import express, { urlencoded } from "express";
 import dotenv from "dotenv";
 import passport from "passport";
-const cors = "require('cors');";
-// import cors from "cors";
-
+import cors from "cors";
 import cookieParser from "cookie-parser";
 import { errorMiddleware } from "./middlewares/errorMiddleware.js";
 import { connectPassport } from "./utils/Provider.js";
@@ -31,7 +29,6 @@ app.use(
     },
   })
 );
-app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 app.use(
@@ -40,14 +37,13 @@ app.use(
   })
 );
 
-// app.use(
-//   cors({
-//     credentials: true,
-//     origin: process.env.FRONTEND_URL,
-//     methods: ["GET", "POST", "PUT", "DELETE"],
-//   })
-// );
-// Use this after the variable declaration
+app.use(
+  cors({
+    credentials: true,
+    origin: process.env.FRONTEND_URL,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  })
+);
 
 app.use(passport.authenticate("session"));
 app.use(passport.initialize());
