@@ -2,6 +2,7 @@ import express, { urlencoded } from "express";
 import dotenv from "dotenv";
 import passport from "passport";
 import cors from "cors";
+var cors = require("cors");
 import cookieParser from "cookie-parser";
 import { errorMiddleware } from "./middlewares/errorMiddleware.js";
 import { connectPassport } from "./utils/Provider.js";
@@ -36,6 +37,8 @@ app.use(
     extended: true,
   })
 );
+
+app.use(cors()); // Use this after the variable declaration
 
 app.use(
   cors({
