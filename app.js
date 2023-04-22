@@ -14,8 +14,7 @@ dotenv.config({
   path: "./config/config.env",
 });
 
-//Using MIddleware
-console.log("working fine");
+// Using Middlewares
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
